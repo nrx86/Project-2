@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="app-header">
+      <div>
+        <h1>My To-Do List</h1>
+        <p class="subtitle">Plan your day, focus on what matters, and keep moving forward.</p>
+      </div>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">☀️</button>
+    </div>
+
+    <div class="task-form">
+      <div class="input-row">
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <button id="addTaskBtn" type="button">Add</button>
+      </div>
+      <div class="meta-row">
+        <input type="date" id="taskDate">
+        <input type="time" id="taskTime">
+        <select id="taskPriority">
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="active" type="button">Active</button>
+        <button class="filter-btn" data-filter="completed" type="button">Completed</button>
+      </div>
+      <div class="toolbar-actions">
+        <input type="search" id="taskSearch" placeholder="Search tasks...">
+        <button id="clearCompletedBtn" class="secondary-btn" type="button">Clear completed</button>
+      </div>
+    </div>
+
+    <div class="task-stats">
+      <span id="taskCount">0 tasks</span>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
